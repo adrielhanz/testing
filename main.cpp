@@ -5,7 +5,9 @@
 #include <fstream>
 
 using namespace std;
+
 const int W15 = 15, SIZE = 3;
+
 class Color{
 private:
     int red;
@@ -14,7 +16,7 @@ private:
 
 
 public:
-    // getters and setters
+    // Getters and setters
     int getRed ()           { return red; }
     int getGreen ()         { return green; }
     int getBlue ()          { return blue; }
@@ -22,7 +24,7 @@ public:
     void setGreen (int g)   { green = g; }
     void setBlue (int b)    { blue = b; }
 
-    // print method
+    // Print method
     void print (){
         cout << setw(W15) << "red: " << red << endl;
         cout << setw(W15) << "green: " << green << endl;
@@ -31,14 +33,14 @@ public:
 };
 
 int main (){
-    cout << "Hello world!\n";
-
     Color color1, color2, color3;
     
+    // Populate with data
     color1.setRed(255);     color1.setGreen(0);    color1.setBlue(0);   // red
     color2.setRed(0);       color2.setGreen(255);  color2.setBlue(0);   // green
     color3.setRed(0);       color3.setGreen(0);    color3.setBlue(255); // blue
 
+    // Print values
     cout << "Color 1: \n";
     color1.print();
 
