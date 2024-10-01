@@ -5,14 +5,14 @@
 #include <fstream>
 
 using namespace std;
-
+const int W15 = 15, SIZE = 3;
 class Color{
 private:
     int red;
     int green;
     int blue;
 
-const int W15 = 15;
+
 public:
     // getters and setters
     int getRed ()           { return red; }
@@ -31,8 +31,22 @@ public:
 };
 
 int main (){
-    cout << "Hello world!";
+    cout << "Hello world!\n";
 
     Color color1, color2, color3;
     
+    color1.setRed(255);     color1.setGreen(0);    color1.setBlue(0);   // red
+    color2.setRed(0);       color2.setGreen(255);  color2.setBlue(0);   // green
+    color3.setRed(0);       color3.setGreen(0);    color3.setBlue(255); // blue
+
+    cout << "Color 1: \n";
+    color1.print();
+
+    cout << "Color 2: \n";
+    color2.print();
+    
+    cout << "Color 3: \n";
+    color3.print();
+
+    return 0;
 }
